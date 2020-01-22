@@ -1,0 +1,17 @@
+{
+  "name": "amper/TZ",
+  "description": "OOP,Class,Interfeqs,Patterns",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lutenko",
+      "email": "lamprologus.ua@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/"
+    }
+  }
+}
