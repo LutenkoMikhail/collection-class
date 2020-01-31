@@ -4,6 +4,8 @@
 namespace src;
 
 
+use Exception;
+
 class Collection
 {
     private $items = array();
@@ -21,7 +23,7 @@ class Collection
         }
     }
 
-    public function removeKey($key)
+    public function remove($key)
     {
         if (isset($this->items[$key])) {
             unset($this->items[$key]);
@@ -46,11 +48,16 @@ class Collection
     }
 
 
-    public function check(object $key): bool
+    public function check($key): bool
     {
+        return isset($this->items[$key]);
     }
 
-    public function remove(object $key)
+
+    static public function removeAll(object $collection)
     {
+        foreach (array_keys($collection->getObjectList()) as $key) {
+            $collection->remove($key);
+        }
     }
 }
